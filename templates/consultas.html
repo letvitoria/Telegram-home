@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultas de Acesso</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='consultas.css') }}">
+</head>
+<body>
+    <h1>Registro de Acessos</h1>
+        <thead>
+            <tr>
+                <th>Usuário</th>
+                <th>Data e Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for acesso in acessos %}
+            <tr>
+                <td>{{ acesso[0] }}</td>
+                <td>{{ acesso[1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('cadastro') }}" id="Voltar"><p> Voltar para o Início </p></a>
+</body>
+</html>

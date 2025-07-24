@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultas de Acesso</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='exibir_arquivo.css') }}">
+</head>
+<body>
+    <h1>Registros Telegram</h1>
+    
+    <div class="filtros">
+        <form method="get">
+            <div class="filtro-group">
+                <label for="usuario">Usuário: </label>
+                <select id="usuario" name="usuario">
+                    <option value="">Todos os usuários</option>
+                    {% for usuario in usuarios %}
+                    <option value="{{ usuario }}" {% if filtros.usuario == usuario %}selected{% endif %}>{{ usuario }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="filtro-group">
+                <label for="data">Data: </label>
+                <select id="data" name="data">
+                    <option value="">Todas as datas</option>
+                    {% for data in datas %}
+                    <option value="{{ data }}" {% if filtros.data == data %}selected{% endif %}>{{ data }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <button type="submit">Filtrar</button>
+            <a href="?">Limpar filtros</a>
+        </form>
+    </div>
+
+    {% if erro %}
+        <p style="color: red;">{{ erro }}</p>
+    {% elif conteudo%}
+       <div>{{ conteudo | safe }}</div>
+
+    {% elif conteudo %}
+        <pre>{% for linha in conteudo %}{{ linha }}<br>{% endfor %}</pre>
+    {% else %}
+        <p>Nenhum resultado encontrado com os filtros atuais.</p>
+    {% endif %}
+
+    <a href="{{ url_for('cadastro') }}" id="Voltar"><p>Voltar para o Início</p></a>
+</body>
+</html>

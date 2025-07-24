@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #4f9da6, #354f52);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+
+.login {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255,.2);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+    container: center;
+    backdrop-filter: blur(20px);
+
+    
+}
+
+.login h1 {
+    text-align: center;
+    margin-bottom: 100px;
+    color: white;
+}
+
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0 20px;
+    border: 2px, solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 16px;
+    background: transparent;
+    color: #fff;
+    border-radius: 40px;
+}
+
+.login button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f9da6;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+    background-color: #3a7e85;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .login {
+        padding: 30px 20px;
+    }
+}
+
+.alert.danger {
+    background-color: #660000; 
+    color: #fff;
+}
+.alert.success {
+    background-color: #3a633a;
+    color: #fff;
+}
+
+.alert-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto; 
+    width: 100%;
+}
+
+.alert {
+    padding: 10px;
+    margin: 10px 0 0 0; 
+    border-radius: 5px;
+    color: #fff;
+    width: 100%; 
+    text-align: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+/* Correção crucial para o container */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#particles-js {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: transparent !important;
+}

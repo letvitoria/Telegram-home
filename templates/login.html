@@ -1,0 +1,43 @@
+<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='login.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+</head>
+
+<body>
+  <div id="particles-js"> </div>
+    <form method="post" class="login">
+        <h1>Login</h1>
+        <span class="material-symbols-outlined">account_circle</span> Usuário
+        <input type="text" name="username" id="username" placeholder="Nome de Usuário">
+        <span class="material-symbols-outlined">lock</span> Senha
+        <input type="password" name="password" id="password" placeholder="Senha">
+        <i class="bx bxs-lock-alt"> </i>
+        <button type="submit" id="submit">Entrar</button>
+        
+        <div class="alert-area">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                  <div class="alert {{ category }}">{{ message }}</div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+        </div>
+    </form>
+    </form>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    console.log(typeof particleJS);
+  </script>
+  <script src="{{ url_for('static', filename='particles.js') }}"> </script>
+</body>
+
+
+</html>

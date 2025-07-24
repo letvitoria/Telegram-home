@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cadastro.css') }}">
+    <div class="head">
+        <h1 class="logo"></h1>
+        <strong><nav>
+            <ul id="Menu">
+                <li><a href="{{ url_for('listar_usuarios') }}">Usuários</a></li>
+                <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{url_for('consultas')}}">consultas</a></li>
+                <li><a href="{{url_for('exibir_arquivo')}}">TXT</a></li>
+            </ul>
+        </nav></strong>
+    </div>
+</head>
+<body>
+    <div id="container">
+        <h1> Cadastro de Usuários - Telegram</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div id="flash-message-{{ category }}" class="flash-message">{{ message }}</div>
+            <script>
+                $(document).ready(function() {
+                    setTimeout(function() {
+                        $(".flash-message").fadeOut("slow");
+                    }, 2000); 
+                });
+            </script>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <form method="post" action="{{ url_for('cadastro') }}" class="cadastro">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+            <label for="setor">Setor:</label>
+            <input type="text" id="setor" name="setor" required>
+            <div class="confirma">
+                <button type="submit" id="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
