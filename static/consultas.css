@@ -1,23 +1,149 @@
-body{
-    font-family: Arial, sans-serif;
-    background-color: #4f9da6;
-    padding: 20px;
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+  --primary: #4f9da6;
+  --primary-dark: #3a7e85;
+  --primary-darker: #354f52;
+  --secondary: #3a7bd5;
+  --light: #ffffff;
+  --dark: #000000;
+  --gray: #7f8c8d;
+  --success: #3aa17d;
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 
-h1{
-    color: #333;
-    text-align: center;
+/* ===== ESTILOS GERAIS ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--primary), var(--primary-darker));
+  color: var(--light);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
 
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  color: var(--light);
 }
-ul{
-    list-style-type: none;
-    padding: 0;
+
+/* ===== ESTILOS DA TABELA ===== */
+table {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* Espaçamento vertical entre linhas */
+  background-color: transparent;
 }
-li{
-    background-color: #4f9da6;
+
+thead {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
 }
-#Voltar{
-    font-size: large;
-    background-color: #446367;
-    color: #fff;
+
+th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--light);
+  border-bottom: 2px solid var(--primary);
+}
+
+tbody tr {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+td {
+  padding: 15px;
+  vertical-align: top; /* Alinhamento no topo para melhor visualização */
+}
+
+/* Estilo específico para a célula de usuário */
+td:first-child {
+  white-space: pre-line; /* Permite quebras de linha */
+  word-break: break-word; /* Quebra palavras longas */
+  padding-bottom: 5px; /* Espaço adicional após o usuário */
+}
+
+/* Estilo para data/hora */
+td:last-child {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9em;
+}
+
+/* ===== BOTÃO VOLTAR ===== */
+#Voltar {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+#Voltar p {
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--light);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+#Voltar p:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  table {
+    width: 95%;
+    font-size: 0.9rem;
+  }
+  
+  th, td {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  #Voltar p {
+    padding: 10px 20px;
+  }
+  
+  td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  td:first-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  td:last-child {
+    padding-top: 5px;
+    font-size: 0.8em;
+  }
 }

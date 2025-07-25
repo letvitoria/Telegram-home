@@ -1,135 +1,191 @@
-:root {
-  --primary: #4f9da6;    
-  --primary-dark: #3a7e85;  
-  --primary-darker: #354f52; 
-  --secondary: #3a7bd5;  
-  --light: #ffffff;     
-  --dark: #000000;        
-  --gray: #7f8c8d;      
-  --success: #3aa17d;       
-  --shadow: rgba(0, 0, 0, 0.1); 
-}
+
+@import url('cadastro.css');
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, var(--primary), var(--primary-darker));
-  color: var(--light);
+  color: var(--primary-dark);
   margin: 0;
   padding: 0;
   min-height: 100vh;
 }
 
-
 h1 {
-    color: #f5f5f5;
-    text-align: center;
-    margin-bottom: 25px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 40px 0 30px;
+  color: var(--light);
+  font-size: 2.2rem;
 }
 
-/* Container dos filtros - agora em linha */
+
 .filtros {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 15px var(--primary-dark);
+  margin: 0 auto 20px;
+  max-width: 900px;
 }
 
-/* Cada grupo de filtro alinhado em linha */
 .filtro-group {
-    display: flex;
-    align-items: center;
-    margin: 0;
+  margin-bottom: 20px;
 }
 
 .filtro-group label {
-    margin-right: 8px;
-    font-weight: bold;
-    white-space: nowrap;
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 600;
+  color: var(--light);
+  min-width: 80px;
 }
 
-select {
-    padding: 6px 10px;
-    border-radius: 4px;
-    border: none;
-    background-color: #f5f5f5;
-    color: #333;
-    min-width: 150px;
+.filtro-group select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid var(--primary-dark);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--light);
+  transition: all 0.3s ease;
+  min-width: 200px;
+
 }
 
-/* Container dos botões */
-.filtro-botoes {
-    display: flex;
-    gap: 10px;
-    margin-left: auto;
+.filtro-group select:focus {
+    outline: None;
+  border-color: var(--secondary);
+  background-color: #354f52;
+  transition-duration: all 0.15s aese;
+  backdrop-filter: None;
 }
 
-button, .filtro-botoes a {
-    padding: 6px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
+.filtros form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
 }
 
-button {
-    background-color: #3a7bd5;
-    color: white;
+.filtros button {
+  padding: 10px 20px;
+  margin-right: 15px;
 }
 
-button:hover {
-    background-color: #2c5fb3;
+.filtros a {
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.filtro-botoes a {
-    background-color: #95a5a6;
-    color: white;
-    text-decoration: none;
+.filtros a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
 }
 
-.filtro-botoes a:hover {
-    background-color: #7f8c8d;
+
+pre, div {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px var(--shadow);
+  margin: 0 auto 30px;
+  max-width: 1000vh;
+  color: var(--light);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Consolas', 'Monaco', monospace;
+  line-height: 1.5;
 }
 
-/* Área de conteúdo */
-.conteudo-log, pre {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 8px;
-    color: #333;
-    line-height: 1.5;
-    white-space: pre-wrap;
-    font-family: 'Courier New', monospace;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+p[style*="color: red"] {
+  background-color: rgba(212, 63, 63, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: var(--light);
+  max-width: 900px;
+  margin: 0 auto 30px;
 }
 
 #Voltar {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 8px 15px;
-    background: #2e856e;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
+  display: block;
+  text-align: center;
+  margin: 40px auto;
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-#Voltar:hover {
-    background: #3aa17d;
+#Voltar p {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-/* Responsividade */
+#Voltar:hover p {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+#limpar{
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+
+}
+
 @media (max-width: 768px) {
-    .filtros {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .filtro-botoes {
-        margin-left: 0;
-        justify-content: center;
-    }
+  .filtros form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filtro-group {
+    margin-bottom: 15px;
+  }
+  
+  .filtro-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .filtro-group select {
+    width: 100%;
+  }
+  
+  .filtros button {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+  
+  .filtros a {
+    text-align: center;
+    display: block;
+  }
+  
+  pre, div {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+    margin: 30px 0 20px;
+  }
+  
+  .filtros {
+    padding: 15px;
+  }
 }
