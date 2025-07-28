@@ -1,20 +1,20 @@
-/* ===== CORES ===== */
 :root {
-  --primary: #4f9da6;    
-  --primary-dark: #3a7e85;  
-  --primary-darker: #354f52; 
-  --secondary: #3a7bd5;  
-  --light: #ffffff;     
+  --primary: #0A0A0A;    
+  --primary-dark: #16213E;  
+  --primary-darker: #1E2A3A; 
+  --secondary: #7F7F7F;  
+  --light: #E6EFFA; 
   --dark: #000000;        
-  --gray: #7f8c8d;      
-  --success: #3aa17d;       
-  --shadow: rgba(0, 0, 0, 0.1); 
+  --gray: #2B2B2B;      
+  --success: #00D2FF;       
+  --shadow: #1A2230; 
+  --accent: #2b548d; 
+  --accent-dark: #193e42; 
 }
 
-/* ===== ESTILOS GERAIS ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, var(--primary), var(--primary-darker));
+  background: #1E2A3A; 
   color: var(--light);
   margin: 0;
   padding: 0;
@@ -27,14 +27,13 @@ body {
   margin: 80px auto 40px;
 }
 
-/* ===== FORMULÁRIOS ===== */
 .cadastro {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #2E3740; 
   backdrop-filter: blur(10px);
   padding: 40px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px var(--shadow);
+  border: 1px solid rgba(58, 123, 213, 0.2); 
+  box-shadow: 0 8px 32px rgba(26, 34, 48, 0.5);
 }
 
 .cadastro label {
@@ -50,21 +49,20 @@ body {
   margin-bottom: 20px;
   border: 2px solid var(--primary-dark);
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--light);
+  background-color: rgba(255, 255, 255, 0.05); /* Fundo mais suave */
+  color: #ffff;
   font-family: inherit;
   transition: all 0.3s ease;
 }
 
 .cadastro input:focus {
   outline: none;
-  border-color: var(--secondary);
-  background-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--primary-darker); /* cor ao clicar */
+  background-color: rgba(255, 255, 255, 0.05); 
 }
 
-/* ===== BOTÕES ===== */
 button, .btn {
-  background-color: var(--primary);
+  background-color: var(--accent);
   color: var(--light);
   border: none;
   padding: 12px 24px;
@@ -77,74 +75,91 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-  background-color: var(--primary-dark);
+  background-color: #2A68C7; 
   transform: translateY(-2px);
   box-shadow: 0 4px 8px var(--shadow);
 }
 
-/* ===== MENU SUPERIOR ===== */
-
-/* ===== MENU SUPERIOR (ESTILO ORIGINAL) ===== */
 .head {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    background: transparent;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: transparent;
 }
 
 #Menu {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    gap: 20px;
-    justify-content: flex-end;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 20px;
+  justify-content: flex-end;
 }
 
 #Menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.95rem;
-    padding: 10px 15px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    background-color: #3a7e85; /* Cor original */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: var(--light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: var(--accent); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #Menu li a:hover {
-    background-color: #193e42; /* Hover original */
-    transform: translateY(-2px);
+  background-color: var(--accent-dark); 
+  transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    #Menu {
-        padding: 0 15px;
-        gap: 15px;
-        justify-content: space-around;
-    }
-    
-    #Menu li a {
-        font-size: 1rem;
-        padding: 8px 10px;
-    }
-}
-
-/* ===== MENSAGENS FLASH ===== */
 .flash-message {
-  padding: 12px 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  color: var(--light);
+    padding: 15px 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 800px;
+    text-align: center;
+    font-weight: 600;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s forwards;
 }
 
 .flash-message.success {
-  background-color: var(--success);
+    background-color: rgba(0, 210, 255, 0.2); /* var(--success) com transparência */
+    border: 1px solid var(--success);
+    color: var(--light);
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    animation: fadeIn 0.3s;
 }
 
-.flash-message.error {
-  background-color: #d43f3f;
+.alert-success {
+    background-color: rgba(0, 210, 255, 0.2);
+    border: 1px solid var(--success);
+    color: var(--light);
+}
+
+.alert-error {
+    background-color: rgba(212, 63, 63, 0.2);
+    border: 1px solid var(--error);
+    color: var(--light);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 
 /* ===== RESPONSIVO ===== */

@@ -66,15 +66,16 @@ def cadastro():
         telefone = request.form['telefone']
         setor = request.form['setor']
 
-    
         try:
             adicionar_usuario(nome, username, matricula, cpf, telefone, setor)
             flash('Usuário cadastrado com sucesso!', 'success')
-            return redirect(url_for('listar_usuarios'))#estava:listar_usuarios
-        
+    
+        except ValueError as e:
+            flash(str(e), 'erro')
+            return render_template('cadastro.html', form_data=request.form)
         except Exception as e:
-            flash(f'Erro ao cadastrar usuário: {str(e)}', 'danger')
-
+            flash('Erro', 'erro')
+            #adicionar
             
     return render_template('cadastro.html', usuario_salvo=usuario_salvo)
 

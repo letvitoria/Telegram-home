@@ -1,20 +1,8 @@
-/* ===== VARIÁVEIS DE CORES ===== */
-:root {
-  --primary: #4f9da6;
-  --primary-dark: #3a7e85;
-  --primary-darker: #354f52;
-  --secondary: #3a7bd5;
-  --light: #ffffff;
-  --dark: #000000;
-  --gray: #7f8c8d;
-  --success: #3aa17d;
-  --shadow: rgba(0, 0, 0, 0.1);
-}
-
+@import url(cadastro.css);
 /* ===== ESTILOS GERAIS ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, var(--primary), var(--primary-darker));
+  background: #1E2A3A;
   color: var(--light);
   margin: 0;
   padding: 20px;
@@ -27,13 +15,13 @@ h1 {
   color: var(--light);
 }
 
-/* ===== ESTILOS DA TABELA ===== */
+
 table {
   width: 90%;
   max-width: 1000px;
   margin: 30px auto;
   border-collapse: separate;
-  border-spacing: 0 10px; /* Espaçamento vertical entre linhas */
+  border-spacing: 0 10px; 
   background-color: transparent;
 }
 
@@ -66,23 +54,22 @@ tbody tr:hover {
 
 td {
   padding: 15px;
-  vertical-align: top; /* Alinhamento no topo para melhor visualização */
+  vertical-align: top; 
 }
 
-/* Estilo específico para a célula de usuário */
+
 td:first-child {
-  white-space: pre-line; /* Permite quebras de linha */
-  word-break: break-word; /* Quebra palavras longas */
-  padding-bottom: 5px; /* Espaço adicional após o usuário */
+  white-space: pre-line; 
+  word-break: break-word;
+  padding-bottom: 5px; 
 }
 
-/* Estilo para data/hora */
 td:last-child {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.9em;
 }
 
-/* ===== BOTÃO VOLTAR ===== */
+
 #Voltar {
   display: block;
   width: fit-content;
@@ -105,7 +92,7 @@ td:last-child {
   box-shadow: 0 4px 8px var(--shadow);
 }
 
-/* ===== RESPONSIVIDADE ===== */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
   table {
     width: 95%;

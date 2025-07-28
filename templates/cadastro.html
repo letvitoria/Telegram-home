@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Cadastro</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" > </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cadastro.css') }}">
     <div class="head">
         <h1 class="logo"></h1>
@@ -21,7 +24,31 @@
 <body>
     <div id="container">
         <h1> Cadastro de Usuários - Telegram</h1>
-        {% with messages = get_flashed_messages(with_categories=true) %}
+
+        <form method="post" action="{{ url_for('cadastro') }}" class="cadastro">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="username">Usuário Telegram:</label>
+            <input type="text" class="form-control" id="username" name="username" 
+            value="{{form_data.username if form_data}}" required>
+            {% if 'username' in form_data and 'Nome de usuário já está em uso' in get_flashed_messages()%} 
+            <small class="text-danger">Esse nome de usuário já está em uso! </small>
+            {%endif%}
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required>
+            <!--Adicionando mascara de CPF-->
+            <label for="cpf">CPF:</label>
+            <input type="tel" id="cpf" name="cpf" autocomplete="new-password" tabindex="1" aria-invalid="false" required>
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+            <label for="setor">Setor:</label>
+            <input type="text" id="setor" name="setor" required>
+            <div class="confirma">
+                <button type="submit" id="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
             {% for category, message in messages %}
             <div id="flash-message-{{ category }}" class="flash-message">{{ message }}</div>
@@ -35,23 +62,9 @@
             {% endfor %}
         {% endif %}
         {% endwith %}
-        <form method="post" action="{{ url_for('cadastro') }}" class="cadastro">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <label for="username">Usuário Telegram:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="matricula">Matrícula:</label>
-            <input type="text" id="matricula" name="matricula" required>
-            <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
-            <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" required>
-            <label for="setor">Setor:</label>
-            <input type="text" id="setor" name="setor" required>
-            <div class="confirma">
-                <button type="submit" id="submit">Cadastrar</button>
-            </div>
-        </form>
-    </div>
+    <script>
+        $('#cpf').mask('000.000.000-00', {reverse: true});
+        $('#telefone').mask('(00) 00000-0000');
+    </script>
 </body>
 </html>

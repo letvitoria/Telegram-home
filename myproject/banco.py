@@ -41,15 +41,41 @@ def adicionar_usuario(nome, username, matricula, cpf, telefone, setor):
     conn = conectar_db()
     cursor = conn.cursor()
     try:
+        # Verifica username (note a vírgula após username para criar uma tupla)
+        cursor.execute("SELECT username FROM usuarios WHERE username = ?", (username,))
+        if cursor.fetchone():
+            raise ValueError("Nome de usuário já está em uso")
+        
+        # Verifica CPF
+        cursor.execute("SELECT cpf FROM usuarios WHERE cpf = ?", (cpf,))
+        if cursor.fetchone():
+            raise ValueError("CPF já cadastrado")
+        
+        # Verifica matrícula
+        cursor.execute("SELECT matricula FROM usuarios WHERE matricula = ?", (matricula,))
+        if cursor.fetchone():
+            raise ValueError("Matrícula já cadastrada")
+        
+        # Verifica telefone
+        cursor.execute("SELECT telefone FROM usuarios WHERE telefone = ?", (telefone,))
+        if cursor.fetchone():
+            raise ValueError("Telefone já cadastrado")
+
         cursor.execute("""
-        INSERT INTO usuarios (nome, username, matricula, cpf, telefone, setor) VALUES (?, ?, ?, ?, ?, ?)
+        INSERT INTO usuarios (nome, username, matricula, cpf, telefone, setor) 
+        VALUES (?, ?, ?, ?, ?, ?)
         """, (nome, username, matricula, cpf, telefone, setor))
         conn.commit()
-    except conn.IntegrityError:
-        print("Erro: Nome de usuário ou CPF já cadastrado.")
+        return True
+        
+    except ValueError as e:
+        conn.rollback()
+        raise  # Re-lança a exceção para ser tratada na rota
+    except Exception as e:
+        conn.rollback()
+        raise Exception("Erro desconhecido ao cadastrar usuário")
     finally:
         conn.close()
-    print("")
 
 def inserir_dados(nome, username, matricula, cpf, telefone, setor):
     conn = conectar_db()
