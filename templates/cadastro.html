@@ -15,8 +15,8 @@
                 <li><a href="{{ url_for('listar_usuarios') }}">Usuários</a></li>
                 <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
                 <li><a href="{{ url_for('login') }}">Login</a></li>
-                <li><a href="{{url_for('consultas')}}">consultas</a></li>
-                <li><a href="{{url_for('exibir_arquivo')}}">TXT</a></li>
+                <li><a href="{{url_for('consultas')}}">Acessos</a></li>
+                <li><a href="{{url_for('exibir_arquivo')}}">Consultas</a></li>
             </ul>
         </nav></strong>
     </div>
@@ -27,22 +27,22 @@
 
         <form method="post" action="{{ url_for('cadastro') }}" class="cadastro">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <label for="username">Usuário Telegram:</label>
+            <input type="text" id="nome" name="nome" value="{{form_data.nome if form_data}}" required>
+            <label for="username">Username Telegram:</label>
             <input type="text" class="form-control" id="username" name="username" 
             value="{{form_data.username if form_data}}" required>
             {% if 'username' in form_data and 'Nome de usuário já está em uso' in get_flashed_messages()%} 
-            <small class="text-danger">Esse nome de usuário já está em uso! </small>
             {%endif%}
             <label for="matricula">Matrícula:</label>
-            <input type="text" id="matricula" name="matricula" required>
+            <input type="tel" id="matricula" name="matricula" value="{{form_data.matricula if form_data}}" required>
             <!--Adicionando mascara de CPF-->
             <label for="cpf">CPF:</label>
-            <input type="tel" id="cpf" name="cpf" autocomplete="new-password" tabindex="1" aria-invalid="false" required>
+            <input type="tel" id="cpf" name="cpf" value="{{form_data.cpf if form_data}}"  autocomplete="new-password" 
+            tabindex="1" aria-invalid="false" placeholder="Digite o CPF (apenas números, 11 dígitos)" required>
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" required>
+            <input type="text" id="telefone" name="telefone" value="{{form_data.telefone if form_data}}" placeholder="Apenas números">
             <label for="setor">Setor:</label>
-            <input type="text" id="setor" name="setor" required>
+            <input type="text" id="setor" name="setor" value="{{form_data.setor if form_data}}" required>
             <div class="confirma">
                 <button type="submit" id="submit">Cadastrar</button>
             </div>

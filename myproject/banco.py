@@ -41,25 +41,16 @@ def adicionar_usuario(nome, username, matricula, cpf, telefone, setor):
     conn = conectar_db()
     cursor = conn.cursor()
     try:
-        # Verifica username (note a vírgula após username para criar uma tupla)
         cursor.execute("SELECT username FROM usuarios WHERE username = ?", (username,))
         if cursor.fetchone():
             raise ValueError("Nome de usuário já está em uso")
         
-        # Verifica CPF
         cursor.execute("SELECT cpf FROM usuarios WHERE cpf = ?", (cpf,))
         if cursor.fetchone():
             raise ValueError("CPF já cadastrado")
         
-        # Verifica matrícula
-        cursor.execute("SELECT matricula FROM usuarios WHERE matricula = ?", (matricula,))
-        if cursor.fetchone():
-            raise ValueError("Matrícula já cadastrada")
         
-        # Verifica telefone
-        cursor.execute("SELECT telefone FROM usuarios WHERE telefone = ?", (telefone,))
-        if cursor.fetchone():
-            raise ValueError("Telefone já cadastrado")
+
 
         cursor.execute("""
         INSERT INTO usuarios (nome, username, matricula, cpf, telefone, setor) 

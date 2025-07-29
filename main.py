@@ -20,7 +20,7 @@ criar_tabela_acessos()
 def index():
     return redirect(url_for('login'))
 
-#pegando as informações de login from main.py
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -35,7 +35,7 @@ def login():
             return render_template('login.html')
     return render_template('login.html')
 
-@app.route('/usuarios')  # ← path da rota
+@app.route('/usuarios')  
 def listar_usuarios():
     print("rota de usuários acessada com sucesso!")
     usuario = session.get('usuario_logado')
@@ -67,6 +67,7 @@ def cadastro():
         setor = request.form['setor']
 
         try:
+            
             adicionar_usuario(nome, username, matricula, cpf, telefone, setor)
             flash('Usuário cadastrado com sucesso!', 'success')
     

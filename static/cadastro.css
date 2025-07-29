@@ -49,7 +49,7 @@ body {
   margin-bottom: 20px;
   border: 2px solid var(--primary-dark);
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.05); /* Fundo mais suave */
+  background-color: rgba(255, 255, 255, 0.05);
   color: #ffff;
   font-family: inherit;
   transition: all 0.3s ease;
@@ -124,7 +124,7 @@ button:hover, .btn:hover {
 }
 
 .flash-message.success {
-    background-color: rgba(0, 210, 255, 0.2); /* var(--success) com transparência */
+    background-color: rgba(0, 210, 255, 0.2); 
     border: 1px solid var(--success);
     color: var(--light);
 }
@@ -162,7 +162,7 @@ button:hover, .btn:hover {
     to { opacity: 0; }
 }
 
-/* ===== RESPONSIVO ===== */
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
   #Menu {
     flex-direction: column;
