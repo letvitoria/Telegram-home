@@ -20,7 +20,6 @@ criar_tabela_acessos()
 def index():
     return redirect(url_for('login'))
 
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -31,7 +30,7 @@ def login():
             flash('Bem-vindo!', 'success')
             return redirect(url_for('cadastro'))
         else:
-            flash('Usuário ou senha incorretos.', 'danger')
+            flash('Credenciais inválidas!', 'danger')
             return render_template('login.html')
     return render_template('login.html')
 
@@ -104,7 +103,7 @@ def consultas():
 @app.route('/exibir_arquivo')
 def exibir_arquivo():
     try:
-        caminho = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'access_log.txt')
+        caminho = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'access_semdados.txt')
         
         # Filtros da URL
         filtro_data = request.args.get('data')
@@ -115,7 +114,7 @@ def exibir_arquivo():
         todos_usuarios = set()
         ultima_data=None
         
-        with open(caminho, "r", encoding='latin-1') as arquivo:
+        with open(caminho, "r", encoding='utf-8') as arquivo:
             for linha in arquivo:
                 # Extrai dados da linha
                 match = LOG_PATTERN.search(linha)

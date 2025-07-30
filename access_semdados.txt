@@ -1,0 +1,108 @@
+2025-04-07 17:07:34.111110 - User supervisor_ti: Imagem recebida
+2025-04-08 17:07:37.111110 - User seguranca_01: Pessoa identificada: Tentativa de acesso não autorizada
+2025-04-07 17:07:39.111110 - User portaria_sul: Nenhuma correspondência encontrada
+2025-04-07 17:07:39.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-07 17:07:40.111110 - User seguranca_01: Pessoa identificada: ANA CLARA SILVA - 22334455678 - ID 000001
+2025-04-06 17:07:41.111110 - User portaria_norte: Nenhuma correspondência encontrada
+2025-04-08 06:59:51.111110 - User supervisor_ti: Erro ao consultar a base de dados
+2025-04-08 06:59:54.111110 - User seguranca_01: Pessoa identificada: CARLOS EDUARDO BRITO - 33445566789 - ID 000002
+2025-04-08 06:59:56.111110 - User portaria_leste: Nenhuma correspondência encontrada
+2025-04-08 06:59:56.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-08 06:59:56.111110 - User seguranca_01: Erro ao remover imagem: [WinError 32] O arquivo já está sendo usado por outro processo: 'temp/Nnasiowjqsowjspqdqwowj.jpg'
+2025-04-08 06:59:58.111110 - User portaria_oeste: Nenhuma correspondência encontrada
+2025-04-09 08:10:01.111110 - User supervisor_ti: Imagem recebida
+2025-04-09 08:10:04.111110 - User seguranca_02: Pessoa identificada: Tentativa de acesso não autorizada
+2025-04-09 08:10:06.111110 - User portaria_sul: Nenhuma correspondência encontrada
+2025-04-09 08:10:08.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-09 08:10:09.111110 - User seguranca_02: Pessoa identificada: BEATRIZ ALVES LIMA - 44556677890 - ID 000003
+2025-04-10 09:20:11.111110 - User portaria_norte: Nenhuma correspondência encontrada
+2025-04-10 09:20:14.111110 - User supervisor_ti: Erro ao consultar a base de dados
+2025-04-10 09:20:17.111110 - User seguranca_02: Pessoa identificada: DIOGO PEREIRA COSTA - 55667788901 - ID 000004
+2025-04-10 09:20:19.111110 - User portaria_leste: Nenhuma correspondência encontrada
+2025-04-10 09:20:21.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-10 09:20:23.111110 - User seguranca_02: Erro ao remover imagem: [WinError 32] O arquivo já está sendo usado por outro processo: 'temp/Qwertyuiopasdfghjklzxc.jpg'
+2025-04-10 09:20:25.111110 - User portaria_oeste: Nenhuma correspondência encontrada
+2025-04-11 10:30:27.111110 - User supervisor_ti: Imagem recebida
+2025-04-11 10:30:29.111110 - User seguranca_03: Pessoa identificada: Tentativa de acesso não autorizada
+2025-04-11 10:30:31.111110 - User portaria_sul: Nenhuma correspondência encontrada
+2025-04-11 10:30:33.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-11 10:30:35.111110 - User seguranca_03: Pessoa identificada: EDUARDO GOMES ROCHA - 66778899012 - ID 000005
+2025-04-12 11:40:37.111110 - User portaria_norte: Nenhuma correspondência encontrada
+2025-04-12 11:40:39.111110 - User supervisor_ti: Erro ao consultar a base de dados
+2025-04-12 11:40:41.111110 - User seguranca_03: Pessoa identificada: FERNANDA SOUZA MELO - 77889900123 - ID 000006
+2025-04-12 11:40:43.111110 - User portaria_leste: Nenhuma correspondência encontrada
+2025-04-12 11:40:45.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-12 11:40:47.111110 - User seguranca_03: Erro ao remover imagem: [WinError 32] O arquivo já está sendo usado por outro processo: 'temp/Zxcvbnmasdfghjklqwerty.jpg'
+2025-04-12 11:40:49.111110 - User portaria_oeste: Nenhuma correspondência encontrada
+2025-04-13 12:50:51.111110 - User supervisor_ti: Imagem recebida
+2025-04-13 12:50:53.111110 - User seguranca_04: Pessoa identificada: Tentativa de acesso não autorizada
+2025-04-13 12:50:55.111110 - User portaria_sul: Nenhuma correspondência encontrada
+2025-04-13 12:50:57.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-13 12:50:59.111110 - User seguranca_04: Pessoa identificada: GABRIELA FERREIRA LIMA - 88990011234 - ID 000007
+2025-04-14 13:00:01.111110 - User portaria_norte: Nenhuma correspondência encontrada
+2025-04-14 13:00:03.111110 - User supervisor_ti: Erro ao consultar a base de dados
+2025-04-14 13:00:05.111110 - User seguranca_04: Pessoa identificada: HENRIQUE DUARTE PINTO - 99001122345 - ID 000008
+2025-04-14 13:00:07.111110 - User portaria_leste: Nenhuma correspondência encontrada
+2025-04-14 13:00:09.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-14 13:00:11.111110 - User seguranca_04: Erro ao remover imagem: [WinError 32] O arquivo já está sendo usado por outro processo: 'temp/Mnnbvcxzasdfghjklpoiuyt.jpg'
+2025-04-14 13:00:13.111110 - User portaria_oeste: Nenhuma correspondência encontrada
+2025-04-15 14:10:15.111110 - User supervisor_ti: Imagem recebida
+2025-04-15 14:10:17.111110 - User seguranca_01: Pessoa identificada: Tentativa de acesso não autorizada
+2025-04-15 14:10:19.111110 - User portaria_sul: Nenhuma correspondência encontrada
+2025-04-15 14:10:21.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-15 14:10:23.111110 - User seguranca_01: Pessoa identificada: ISABELA RODRIGUES SILVA - 11223344567 - ID 000009
+2025-04-16 15:20:25.111110 - User portaria_norte: Nenhuma correspondência encontrada
+2025-04-16 15:20:27.111110 - User supervisor_ti: Erro ao consultar a base de dados
+2025-04-16 15:20:29.111110 - User seguranca_01: Pessoa identificada: JOAO PEDRO CORREIA - 22334455678 - ID 000010
+2025-04-16 15:20:31.111110 - User portaria_leste: Nenhuma correspondência encontrada
+2025-04-16 15:20:33.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-16 15:20:35.111110 - User seguranca_01: Erro ao remover imagem: [WinError 32] O arquivo já está sendo usado por outro processo: 'temp/Bvcxzlkjhgfdsaqwertyu.jpg'
+2025-04-16 15:20:37.111110 - User portaria_oeste: Nenhuma correspondência encontrada
+2025-04-17 16:30:39.111110 - User supervisor_ti: Imagem recebida
+2025-04-17 16:30:41.111110 - User seguranca_02: Pessoa identificada: Tentativa de acesso não autorizada
+2025-04-17 16:30:43.111110 - User portaria_sul: Nenhuma correspondência encontrada
+2025-04-17 16:30:45.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-17 16:30:47.111110 - User seguranca_02: Pessoa identificada: JULIA OLIVEIRA PAIVA - 33445566789 - ID 000011
+2025-04-18 17:40:49.111110 - User portaria_norte: Nenhuma correspondência encontrada
+2025-04-18 17:40:51.111110 - User supervisor_ti: Erro ao consultar a base de dados
+2025-04-18 17:40:53.111110 - User seguranca_02: Pessoa identificada: KAIQUE LIMA REZENDE - 44556677890 - ID 000012
+2025-04-18 17:40:55.111110 - User portaria_leste: Nenhuma correspondência encontrada
+2025-04-18 17:40:57.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-18 17:40:59.111110 - User seguranca_02: Erro ao remover imagem: [WinError 32] O arquivo já está sendo usado por outro processo: 'temp/KjhlmnbvcxzaqweRtyui.jpg'
+2025-04-18 17:50:01.111110 - User portaria_oeste: Nenhuma correspondência encontrada
+2025-04-19 08:00:03.111110 - User supervisor_ti: Imagem recebida
+2025-04-19 08:00:05.111110 - User seguranca_03: Pessoa identificada: Tentativa de acesso não autorizada
+2025-04-19 08:00:07.111110 - User portaria_sul: Nenhuma correspondência encontrada
+2025-04-19 08:00:09.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-19 08:00:11.111110 - User seguranca_03: Pessoa identificada: LAURA SILVA COSTA - 55667788901 - ID 000013
+2025-04-20 09:10:13.111110 - User portaria_norte: Nenhuma correspondência encontrada
+2025-04-20 09:10:15.111110 - User supervisor_ti: Erro ao consultar a base de dados
+2025-04-20 09:10:17.111110 - User seguranca_03: Pessoa identificada: LUCAS MOURA LEITE - 66778899012 - ID 000014
+2025-04-20 09:10:19.111110 - User portaria_leste: Nenhuma correspondência encontrada
+2025-04-20 09:10:21.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-20 09:10:23.111110 - User seguranca_03: Erro ao remover imagem: [WinError 32] O arquivo já está sendo usado por outro processo: 'temp/Plokijuhygtfrdeswaqzxcvb.jpg'
+2025-04-20 09:10:25.111110 - User portaria_oeste: Nenhuma correspondência encontrada
+2025-04-21 10:20:27.111110 - User supervisor_ti: Imagem recebida
+2025-04-21 10:20:29.111110 - User seguranca_04: Pessoa identificada: Tentativa de acesso não autorizada
+2025-04-21 10:20:31.111110 - User portaria_sul: Nenhuma correspondência encontrada
+2025-04-21 10:20:33.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-21 10:20:35.111110 - User seguranca_04: Pessoa identificada: MARIANA LOPES ALVES - 77889900123 - ID 000015
+2025-04-22 11:30:37.111110 - User portaria_norte: Nenhuma correspondência encontrada
+2025-04-22 11:30:39.111110 - User supervisor_ti: Erro ao consultar a base de dados
+2025-04-22 11:30:41.111110 - User seguranca_04: Pessoa identificada: MATEUS PEREIRA NEVES - 88990011234 - ID 000016
+2025-04-22 11:30:43.111110 - User portaria_leste: Nenhuma correspondência encontrada
+2025-04-22 11:30:45.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-22 11:30:47.111110 - User seguranca_04: Erro ao remover imagem: [WinError 32] O arquivo já está sendo usado por outro processo: 'temp/Asdfghjklqwertyuiopzxcv.jpg'
+2025-04-22 11:30:49.111110 - User portaria_oeste: Nenhuma correspondência encontrada
+2025-04-23 12:40:51.111110 - User supervisor_ti: Imagem recebida
+2025-04-23 12:40:53.111110 - User seguranca_01: Pessoa identificada: Tentativa de acesso não autorizada
+2025-04-23 12:40:55.111110 - User portaria_sul: Nenhuma correspondência encontrada
+2025-04-23 12:40:57.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-23 12:40:59.111110 - User seguranca_01: Pessoa identificada: NATALIA GONÇALVES DIAS - 99001122345 - ID 000017
+2025-04-24 13:50:01.111110 - User portaria_norte: Nenhuma correspondência encontrada
+2025-04-24 13:50:03.111110 - User supervisor_ti: Erro ao consultar a base de dados
+2025-04-24 13:50:05.111110 - User seguranca_01: Pessoa identificada: OTAVIO RIBEIRO MARTINS - 11223344567 - ID 000018
+2025-04-24 13:50:07.111110 - User portaria_leste: Nenhuma correspondência encontrada
+2025-04-24 13:50:09.111110 - User supervisor_ti: Nenhuma correspondência encontrada
+2025-04-24 13:50:11.111110 - User seguranca_01: Erro ao remover imagem: [WinError 32] O arquivo já está sendo usado por outro processo: 'temp/Uiopasdfghjklzxcvbnm.jpg'
+2025-04-24 13:50:13.111110 - User portaria_oeste: Nenhuma correspondência encontrada
